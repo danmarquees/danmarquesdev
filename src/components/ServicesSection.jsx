@@ -67,7 +67,7 @@ const ServicesSection = () => {
                 {service.title}
               </h3>
               <p className="text-text-muted">{service.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
