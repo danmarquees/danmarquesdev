@@ -87,9 +87,13 @@ const ProjectsSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-surface rounded-lg shadow-xl overflow-hidden group transition-transform duration-300 hover:scale-[1.02]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-surface rounded-lg border border-transparent dark:border-slate-600 shadow-xl overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 hover:border-primary/50 dark:hover:border-primary/50"
             >
               <img
                 src={project.imageUrl}
@@ -133,7 +137,7 @@ const ProjectsSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         {selectedProject && (

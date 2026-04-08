@@ -72,9 +72,13 @@ const SkillsCertificationsSection = () => {
             </h3>
             <div className="grid grid-cols-2 gap-4">
               {skills.map((skill, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-surface border border-gray-200 dark:border-slate-700 p-4 rounded-lg hover:border-primary transition-colors"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05, duration: 0.3 }}
+                  viewport={{ once: true }}
+                  className="bg-surface border border-gray-200 dark:border-slate-600 p-4 rounded-lg hover:border-primary hover:shadow-md dark:hover:border-primary/70 dark:hover:shadow-primary/10 transition-all"
                 >
                   <div className="flex items-center mb-2">
                     <skill.icon className="w-5 h-5 text-primary mr-2" />
@@ -85,7 +89,7 @@ const SkillsCertificationsSection = () => {
                   <span className="text-sm text-text-muted">
                     {skill.level}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -97,9 +101,13 @@ const SkillsCertificationsSection = () => {
             </h3>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-surface border border-gray-200 dark:border-slate-700 p-6 rounded-lg hover:border-primary transition-colors"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.4 }}
+                  viewport={{ once: true }}
+                  className="bg-surface border border-gray-200 dark:border-slate-600 p-6 rounded-lg hover:border-primary hover:shadow-md dark:hover:border-primary/70 dark:hover:shadow-primary/10 transition-all"
                 >
                   <div className="flex items-start">
                     <cert.icon className="w-6 h-6 text-primary mr-4 mt-1 flex-shrink-0" />
@@ -113,7 +121,7 @@ const SkillsCertificationsSection = () => {
                       <p className="text-sm text-primary">{cert.date}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

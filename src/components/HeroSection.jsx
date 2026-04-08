@@ -42,7 +42,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {t("hero.greeting", "Olá, eu sou")}{" "}
-          <span className="text-primary">Danilo Marques</span>
+          <span className="text-gradient">Danilo Marques</span>
         </motion.h1>
 
         <motion.p
@@ -65,13 +65,13 @@ const HeroSection = () => {
         >
           <a
             href="#projects"
-            className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary-hover transition-all transform hover:scale-105 duration-300"
+            className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-lg shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:bg-primary-hover transition-all transform hover:-translate-y-1 duration-300"
           >
             {t("hero.projectsBtn", "Meus Projetos")}
           </a>
           <a
             href="#contact"
-            className="inline-block bg-surface-alt text-text font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-all transform hover:scale-105 duration-300 border border-gray-200 dark:border-slate-700"
+            className="inline-block bg-surface-alt text-text font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 duration-300 border border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-500"
           >
             {t("hero.contactBtn", "Entrar em Contato")}
           </a>
