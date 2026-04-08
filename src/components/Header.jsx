@@ -113,7 +113,7 @@ const Header = () => {
                       <circle cx="12" cy="12" r="10" />
                       <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
                     </svg>
-                    {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
+                    {i18n.language?.startsWith("es") ? "🇪🇸 ES" : (i18n.language?.startsWith("en") ? "🇺🇸 EN" : "🇧🇷 PT")}
                     <svg
                       className="w-4 h-4 ml-2 text-text-muted"
                       fill="none"
@@ -156,6 +156,18 @@ const Header = () => {
                           }}
                         >
                           🇺🇸 English
+                        </button>
+                        <button
+                          className={`w-full px-4 py-2 text-left transition-colors ${i18n.language === "es"
+                              ? "bg-primary/10 text-primary font-semibold"
+                              : "text-text hover:bg-surface-alt"
+                            }`}
+                          onClick={() => {
+                            i18n.changeLanguage("es");
+                            setIsDropdownOpen(false);
+                          }}
+                        >
+                          🇪🇸 Español
                         </button>
                       </motion.div>
                     )}
@@ -235,6 +247,18 @@ const Header = () => {
                   }}
                 >
                   🇺🇸 EN
+                </button>
+                <button
+                  className={`flex-1 px-3 py-2 rounded-lg border transition-colors ${i18n.language === "es"
+                      ? "bg-primary/10 border-primary/30 text-primary font-semibold"
+                      : "bg-surface border-gray-200 dark:border-slate-700 text-text hover:bg-surface-alt"
+                    }`}
+                  onClick={() => {
+                    i18n.changeLanguage("es");
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  🇪🇸 ES
                 </button>
               </div>
               {/* Theme Toggle */}

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -33,17 +33,15 @@ const AboutSection = () => {
             </h2>
             <p className="text-lg mb-4">{t("about.description")}</p>
             <p className="text-lg mb-4">
-              Atuo em todas as etapas do ciclo de desenvolvimento, desde o
-              planejamento da arquitetura até a integração de pagamentos e
-              modelagem de banco de dados. Possuo sólidos conhecimentos em
-              desenvolvimento <strong className="text-primary font-semibold">Full Stack</strong>, combinando linguagens como <strong className="text-primary font-semibold">Python</strong>,
-              <strong className="text-primary font-semibold">JavaScript</strong> e frameworks modernos.
+              <Trans
+                i18nKey="about.p1"
+                components={{
+                  strong: <strong className="text-primary font-semibold" />
+                }}
+              />
             </p>
             <p className="text-lg">
-              Além da vertente técnica, tenho como propósito o uso da tecnologia
-              para impacto social e sustentabilidade, liderando o projeto
-              OrganyxHub, voltado à conexão entre consumidores conscientes e
-              produtores sustentáveis.
+              <Trans i18nKey="about.p2" />
             </p>
           </div>
         </div>

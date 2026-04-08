@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation, Trans } from "react-i18next";
 
 const CookieBanner = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(() => {
     // Verifica se já foi aceito
     return !localStorage.getItem("cookiesAccepted");
@@ -20,29 +22,30 @@ const CookieBanner = () => {
         <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-3 sm:gap-4">
           <div className="flex-1 text-center sm:text-left">
             <p className="text-xs sm:text-sm text-text-muted leading-tight sm:leading-normal">
-              Este site utiliza cookies para melhorar sua experiência. Ao
-              continuar navegando, você concorda com nossa{" "}
-              <Link
-                to="/politica-privacidade"
-                className="text-primary hover:text-primary-hover underline"
-              >
-                Política de Privacidade
-              </Link>{" "}
-              e{" "}
-              <Link
-                to="/politica-cookies"
-                className="text-primary hover:text-primary-hover underline"
-              >
-                Política de Cookies
-              </Link>
-              .
+              <Trans
+                i18nKey="cookies.bannerMessage"
+                components={{
+                  privacy: (
+                    <Link
+                      to="/politica-privacidade"
+                      className="text-primary hover:text-primary-hover underline"
+                    />
+                  ),
+                  cookies: (
+                    <Link
+                      to="/politica-cookies"
+                      className="text-primary hover:text-primary-hover underline"
+                    />
+                  ),
+                }}
+              />
             </p>
           </div>
           <button
             onClick={acceptCookies}
             className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors text-sm font-medium whitespace-nowrap"
           >
-            Aceitar Cookies
+            {t('cookies.accept')}
           </button>
         </div>
       </div>

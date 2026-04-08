@@ -11,7 +11,9 @@
    },
   "about": {
     "title": "Sobre Mim",
-    "description": "Sou Danilo Marques, desenvolvedor Full Stack apaixonado por criar soluções inovadoras e sustentáveis. Especialista em marketplaces, aplicações web modernas e automação inteligente."
+    "description": "Sou Danilo Marques, desenvolvedor Full Stack apaixonado por criar soluções inovadoras e sustentáveis. Especialista em marketplaces, aplicações web modernas e automação inteligente.",
+    "p1": "Atuo em todas as etapas do ciclo de desenvolvimento, desde o planejamento da <strong>arquitetura</strong> até a integração de <strong>pagamentos</strong> e modelagem de <strong>banco de dados</strong>. Possuo sólidos conhecimentos em desenvolvimento <strong>Full Stack</strong>, combinando linguagens como <strong>Python</strong>, <strong>JavaScript</strong> e frameworks modernos.",
+    "p2": "Além da vertente técnica, tenho como propósito o uso da tecnologia para impacto social e sustentabilidade, liderando o projeto OrganyxHub, voltado à conexão entre consumidores conscientes e produtores sustentáveis."
   },
   "services": {
     "title": "Serviços",
@@ -89,7 +91,8 @@
   },
   "cookies": {
     "title": "Política de Cookies",
-    "accept": "Aceitar",
+    "accept": "Aceitar Cookies",
+    "bannerMessage": "Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <privacy>Política de Privacidade</privacy> e <cookies>Política de Cookies</cookies>.",
     "description": "Este site utiliza cookies para melhorar sua experiência.",
     "back": "Voltar ao Portfólio",
     "lastUpdate": "Última atualização",
