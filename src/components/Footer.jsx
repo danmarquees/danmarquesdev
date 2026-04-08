@@ -85,7 +85,7 @@ const Footer = () => {
                 href="https://github.com/danmarquees"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted hover:text-primary transition-colors"
+                className="text-text-muted hover:!text-black dark:hover:!text-white transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="w-6 h-6" />
@@ -94,7 +94,7 @@ const Footer = () => {
                 href="https://linkedin.com/in/danilosmarques"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted hover:text-primary transition-colors"
+                className="text-text-muted hover:!text-[#0A66C2] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-6 h-6" />

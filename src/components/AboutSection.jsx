@@ -36,8 +36,8 @@ const AboutSection = () => {
               Atuo em todas as etapas do ciclo de desenvolvimento, desde o
               planejamento da arquitetura até a integração de pagamentos e
               modelagem de banco de dados. Possuo sólidos conhecimentos em
-              desenvolvimento Full Stack, combinando linguagens como Python,
-              JavaScript e frameworks modernos.
+              desenvolvimento <strong className="text-primary font-semibold">Full Stack</strong>, combinando linguagens como <strong className="text-primary font-semibold">Python</strong>,
+              <strong className="text-primary font-semibold">JavaScript</strong> e frameworks modernos.
             </p>
             <p className="text-lg">
               Além da vertente técnica, tenho como propósito o uso da tecnologia

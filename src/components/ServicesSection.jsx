@@ -52,9 +52,13 @@ const ServicesSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-surface border border-gray-200 dark:border-slate-700 p-8 rounded-lg shadow-lg transition-all duration-300 hover:border-primary hover:shadow-primary/10"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-surface border border-gray-200 dark:border-slate-600 p-8 rounded-lg shadow-lg transition-all duration-300 hover:border-primary hover:shadow-primary/10"
             >
               <div className="mb-6">
                 <service.icon className="h-10 w-10 text-primary" />

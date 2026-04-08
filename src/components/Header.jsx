@@ -113,7 +113,7 @@ const Header = () => {
                       <circle cx="12" cy="12" r="10" />
                       <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
                     </svg>
-                    {i18n.language === "pt" ? "PT" : "EN"}
+                    {i18n.language === "pt" ? "🇧🇷 PT" : "🇺🇸 EN"}
                     <svg
                       className="w-4 h-4 ml-2 text-text-muted"
                       fill="none"
